@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ELMO_uberschrift_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/APP_uberschrift"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="ELMO"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Mitte_linar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ELMO_uberschrift_LinearLayout"
+        app:layout_constraintBottom_toTopOf="@id/TouchBar_Linear_Layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <!-- Ab hier müsst ihr euren Code reinschreiben-->
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TouchBar_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/Home_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/home"
+            app:iconGravity="textStart"
+            app:iconSize="28dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Fotos_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/fotos"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Suche_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/suche"
+            app:iconGravity="textStart"
+            app:iconSize="22dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Profil_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/profil"
+            app:iconGravity="textStart"
+            app:iconSize="21dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
