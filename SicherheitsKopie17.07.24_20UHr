@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Überschrift Layout -->
+    <LinearLayout
+        android:id="@+id/ELMO_uberschrift_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/APP_uberschrift"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="ELMO"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- ScrollView für den mittleren Bereich -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/ELMO_uberschrift_LinearLayout"
+        app:layout_constraintBottom_toTopOf="@id/TouchBar_Linear_Layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Vertikales LinearLayout, um die Reihen zu enthalten -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="8dp">
+
+            <!-- Erste Reihe -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/Rezept_1_Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/bildKnopf1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:id="@+id/RezeptTextFeld1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Rep1Text1\nRep1Text2\nRep1Text3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Rezept_2_Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/bildKnopf2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:id="@+id/RezeptTextFeld2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Rep2Text1\nRep2Text2\nRep2Text3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Zweite Reihe -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/Rezept_3_Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/bildKnopf3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:id="@+id/RezeptTextFeld3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Rep3Text1\nRep3Text2\nRep3Text3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Rezept_4_Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/bildKnopf4"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:id="@+id/RezeptTextFeld4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Rep4Text1\nRep4Text2\nRep4Text3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Dritte Reihe -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/Rezept_5_Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/bildKnopf5"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:id="@+id/RezeptTextFeld5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Rep5Text1\nRep5Text2\nRep5Text3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Rezept_6_Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/bildKnopf6"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:id="@+id/RezeptTextFeld6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Rep6Text1\nRep6Text2\nRep6Text3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- TouchBar Layout -->
+    <LinearLayout
+        android:id="@+id/TouchBar_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/Home_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/home"
+            app:iconGravity="textStart"
+            app:iconSize="28dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Fotos_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/fotos"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Suche_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/suche"
+            app:iconGravity="textStart"
+            app:iconSize="22dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Profil_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:hapticFeedbackEnabled="true"
+            android:visibility="visible"
+            app:icon="@drawable/profil"
+            app:iconGravity="textStart"
+            app:iconSize="21dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
