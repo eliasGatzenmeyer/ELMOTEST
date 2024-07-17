@@ -1,0 +1,69 @@
+ <LinearLayout
+        android:id="@+id/TouchBar_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/Home_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/home"
+            app:iconGravity="textStart"
+            app:iconSize="28dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Fotos_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/fotos"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Suche_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/suche"
+            app:iconGravity="textStart"
+            app:iconSize="22dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Profil_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/profil"
+            app:iconGravity="textStart"
+            app:iconSize="21dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+    </LinearLayout>
