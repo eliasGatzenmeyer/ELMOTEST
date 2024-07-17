@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/TouchBar_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/Home_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/home"
+            app:iconGravity="textStart"
+            app:iconSize="28dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Fotos_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/fotos"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Suche_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/suche"
+            app:iconGravity="textStart"
+            app:iconSize="22dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/Profil_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:visibility="visible"
+            app:icon="@drawable/profil"
+            app:iconGravity="textStart"
+            app:iconSize="21dp"
+            app:iconTint="#000000"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="384dp"
+        android:layout_height="680dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="189dp"
+            android:layout_height="101dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="59dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="189dp"
+            android:layout_height="101dp"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="59dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:id="@+id/ErdbeerkuchenLayout"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="160dp">
+
+            <TextView
+                android:id="@+id/Erdbeerkuchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Erdbeerkuchen"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/Desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desserts"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="180dp" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Sterne"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="199dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/HimberkuchenLayout"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="160dp">
+
+            <TextView
+                android:id="@+id/Himbeerkuchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Himbeerkuchen"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/Desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desserts"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="180dp" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Sterne"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="199dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="189dp"
+            android:layout_height="101dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="280dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:id="@+id/HeidelbeerkuchenLayout"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="381dp">
+
+            <TextView
+                android:id="@+id/Heidelbeerkuchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heidelbeerkuchen"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="381dp" />
+
+            <TextView
+                android:id="@+id/Desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desserts"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="401dp" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Sterne"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="421dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/KäsekuchenLayout"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="381dp">
+
+            <TextView
+                android:id="@+id/Käsekuchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Käsekuchen"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="381dp" />
+
+            <TextView
+                android:id="@+id/Desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desserts"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="401dp" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Sterne"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="421dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="189dp"
+            android:layout_height="101dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="502dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:id="@+id/SchokoladenkuchenLayout"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="603dp">
+
+            <TextView
+                android:id="@+id/Schokoladenkuchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schokoladenkuchen"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="603dp" />
+
+            <TextView
+                android:id="@+id/Desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desserts"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="623dp" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Sterne"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="642dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="189dp"
+            android:layout_height="101dp"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="502dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:id="@+id/ApfelkuchenLayout"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="603dp">
+
+            <TextView
+                android:id="@+id/Apfelkuchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apfelkuchen"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="603dp" />
+
+            <TextView
+                android:id="@+id/Desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desserts"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="623dp" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Sterne"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="642dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="189dp"
+            android:layout_height="101dp"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="280dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
