@@ -1,0 +1,61 @@
+package de.pfh.androit;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        //nicht ändern
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+
+        //ab hier eigener Code
+        setRecipeContent(R.id.bildKnopf1, R.drawable.akuchen, R.id.RezeptTextFeld1, "Muffins\nDessert\n3 Sterne");
+        setRecipeContent(R.id.bildKnopf2, R.drawable.bkuchen, R.id.RezeptTextFeld2, "Topfkuchen\nDessert\n4 Sterne");
+        setRecipeContent(R.id.bildKnopf3, R.drawable.ckuchen, R.id.RezeptTextFeld3, "Erdbeerkuchen\nDessert\n5 Sterne");
+        setRecipeContent(R.id.bildKnopf4, R.drawable.dkuchen, R.id.RezeptTextFeld4, "Nusskuchen\nDessert\n4 Sterne");
+        setRecipeContent(R.id.bildKnopf5, R.drawable.ekuchen, R.id.RezeptTextFeld5, "Schokoladenkuchen\nDessert\n5 Sterne");
+        setRecipeContent(R.id.bildKnopf6, R.drawable.fkuchen, R.id.RezeptTextFeld6, "Blaubeer Pfannkuchen\nDessert\n3 Sterne");
+        setRecipeContent(R.id.bildKnopf7, R.drawable.gkuchen, R.id.RezeptTextFeld7, "Bienenstich\nDessert\n5 Sterne");
+        setRecipeContent(R.id.bildKnopf8, R.drawable.hkuchen, R.id.RezeptTextFeld8, "Himbeerkuchen\nDessert\n2 Sterne");
+        setRecipeContent(R.id.bildKnopf9, R.drawable.ikuchen, R.id.RezeptTextFeld9, "Apfelkuchen\nDessert\n3 Sterne");
+        setRecipeContent(R.id.bildKnopf10, R.drawable.jkuchen, R.id.RezeptTextFeld10, "Beerenkuchen\nDessert\n2 Sterne");
+
+        
+        Button searchButton = findViewById(R.id.Suche_Button);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivitySearch.class);
+                startActivity(intent);
+            }
+        });
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+
+    private void setRecipeContent(int imageButtonId, int imageResId, int textViewId, String text) {
+        ImageButton imageButton = findViewById(imageButtonId);
+        imageButton.setImageResource(imageResId);
+
+        TextView textView = findViewById(textViewId);
+        textView.setText(text);
+    }
+}
