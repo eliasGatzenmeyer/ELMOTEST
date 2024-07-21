@@ -1,0 +1,78 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/elmo_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/elmo_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ELMOEG"
+        tools:targetApi="31">
+
+        <!-- Wireframe1Lea Activity as the main launcher activity -->
+        <activity
+            android:name="de.pfh.androit.Wireframe1Lea"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="de.pfh.androit.MainActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="de.pfh.androit.MainActivitySearch"
+            android:exported="true" />
+
+        <activity
+            android:name="de.pfh.androit.MainActivityMoritz"
+            android:exported="true" />
+
+        <activity
+            android:name="de.pfh.androit.MainActivityVorspeisen"
+            android:exported="true"/>
+
+        <activity
+            android:name="de.pfh.androit.MainActivityHauptspeisen"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="de.pfh.androit.MainActivityAlleRezepte"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="de.pfh.androit.MainActivity2Lea"
+            android:exported="true" />
+
+        <activity
+            android:name="de.pfh.androit.MainActivityRezeptAnzeigen"
+            android:exported="true" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_moritz" />
+        </provider>
+    </application>
+</manifest>
