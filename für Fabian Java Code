@@ -1,0 +1,69 @@
+package de.pfh.androit;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class MainActivityRezeptAnzeigen extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rezept_anzeigen);
+
+        // Initialize views
+        ImageButton rezeptBild = findViewById(R.id.rezeptBild_Moritz_AnzeigeWireframe);
+        TextView rezeptName = findViewById(R.id.Rezeptname_antwort_AnzeigeWireframe);
+        TextView kategorie = findViewById(R.id.kategorie_antwort_AnzeigeWireframe);
+        RatingBar ratingBar = findViewById(R.id.ratingBar);
+        TextView zutaten = findViewById(R.id.Zutaten_antwort_AnzeigeWireframe);
+        TextView zubereitung = findViewById(R.id.Zubereitung_Antwort_AnzeigeWireframe);
+
+        // Set default values or received data
+        rezeptName.setText("Muffin");
+        kategorie.setText("Dessert");
+        ratingBar.setRating(3.5f); // Example rating
+        zutaten.setText("1. Mehl\n2. Zucker\n3. Eier\n...");
+        zubereitung.setText("1. Mix the ingredients\n2. Bake at 180°C for 20 minutes\n...");
+
+        // Set click listeners for the bottom buttons
+        Button zuruckButton = findViewById(R.id.zuruck_Button);
+        zuruckButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivityRezeptAnzeigen.this, Wireframe1Lea.class);
+            startActivity(intent);
+        });
+
+        Button fotosButton = findViewById(R.id.Fotos_Button);
+        fotosButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivityRezeptAnzeigen.this, MainActivityMoritz.class);
+            startActivity(intent);
+        });
+
+        Button sucheButton = findViewById(R.id.Suche_Button);
+        sucheButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivityRezeptAnzeigen.this, MainActivitySearch.class);
+            startActivity(intent);
+        });
+
+        Button profilButton = findViewById(R.id.Profil_Button);
+        profilButton.setOnClickListener(v -> {
+            // Handle profile button click, if needed
+        });
+
+        // Handle window insets for better UI
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+}
